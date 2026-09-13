@@ -1,29 +1,44 @@
-gnaitv/
-  package.json
-  .env
-  .env.production
-  .github/
-    workflows/
-      ntn-safety-gate.yml
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KernelObservabilitySnapshot",
+  "type": "object",
+  "required": ["kernelId", "ecosystemId", "generatedAt", "modules"],
+  "properties": {
+    "kernelId": { "type": "string" },
+    "ecosystemId": { "type": "string" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "health", "lastUpdated"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "health": {
+            "type": "string",
+            "enum": ["unknown", "ok", "degraded", "error"]
+          },
+          "lastUpdated": { "type": "string", "format": "date-time" },
 
-  schemas/
-    observability-schema.json
-
-  src/
-    config/
-      features.js
-
-    cyber/
-      events.js
-      reducer.js
-
-    ntn/
-      ShantaEconNtnStatusPanel.jsx
-
-  tests/
-    ntn/
-      freshness.test.js
-      schema.test.js
-      auth-source.test.js
-      dedup.test.js
-      reducer.test.js
+          "verification": {
+            "type": "string",
+            "enum": ["verified", "unverified"]
+          },
+          "sourceAuth": {
+            "type": "string",
+            "enum": ["trusted", "untrusted"]
+          },
+          "observedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "staleAfter": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
