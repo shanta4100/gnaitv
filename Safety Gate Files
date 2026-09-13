@@ -1,0 +1,24 @@
+gnaitv/
+  src/
+    cyber/
+      events.js
+      reducer.js
+    ntn/
+      ShantaEconNtnStatusPanel.jsx
+    config/
+      features.js
+  tests/
+    ntn/
+      freshness.test.js
+      schema.test.js
+      auth-source.test.js
+      dedup.test.js
+      reducer.test.js
+  schemas/
+    observability-schema.json
+  .env
+  .env.production
+  package.json
+  .github/
+    workflows/
+      ntn-safety-gate.yml
