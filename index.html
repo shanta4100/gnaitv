@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GNAI TV recorded programming and verified live-broadcast status.">
+  <meta name="theme-color" content="#07111f">
+  <title>GNAI TV</title>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <a class="brand" href="/">GNAI TV</a>
+
+    <nav aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="#programs">Programs</a>
+      <a href="#channels">Channels</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Public media and knowledge</p>
+        <h1>Verified information. Authorized programming.</h1>
+
+        <p class="lead">
+          Watch recorded GNAI TV programs and see the verified broadcast
+          status before opening a live stream.
+        </p>
+
+        <a class="button" href="#programs">Start watching</a>
+      </div>
+
+      <aside class="status-card" aria-labelledby="status-heading">
+        <span id="status-label">Checking broadcast status…</span>
+        <h2 id="status-heading">Broadcast status</h2>
+        <p id="status-detail">
+          No live claim is displayed until a configured broadcast is verified.
+        </p>
+      </aside>
+    </section>
+
+    <section id="programs" class="section">
+      <p class="eyebrow">Latest media</p>
+      <h2>Recent programming</h2>
+
+      <div id="program-grid" class="grid" aria-live="polite">
+        <article class="card">
+          <h3>Loading programs</h3>
+          <p>The media connection is being checked.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="channels" class="section">
+      <p class="eyebrow">Channels</p>
+      <h2>Explore GNAI TV</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>News and public information</h3>
+          <p>Verified announcements, interviews and public-interest reports.</p>
+        </article>
+
+        <article class="card">
+          <h3>Education and opportunity</h3>
+          <p>Learning, scholarships, universities, skills and employment.</p>
+        </article>
+
+        <article class="card">
+          <h3>Science and environment</h3>
+          <p>Water, climate, health, energy and disaster-resilience research.</p>
+        </article>
+
+        <article class="card">
+          <h3>Sports and culture</h3>
+          <p>Authorized football, cricket, cultural and entertainment media.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> GNAI TV</span>
+    <span>Live broadcasting remains offline until verified.</span>
+  </footer>
+</body>
+</html>
