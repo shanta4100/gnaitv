@@ -1,0 +1,15 @@
+{
+  "name": "gnaitv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GNAI TV Cloudflare Pages application",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate-schemas": "node scripts/validate-schemas.mjs",
+    "verify": "npm test && npm run validate-schemas"
+  }
+}
