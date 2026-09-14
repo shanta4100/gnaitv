@@ -1,0 +1,44 @@
+name: GNAI TV Quality Gate
+
+on:
+  push:
+    branches:
+      - main
+      - "fix/**"
+      - "feature/**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gnaitv-quality-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gate:
+    name: Test and validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run deterministic tests
+        run: npm test
+
+      - name: Validate JSON schemas
+        run: npm run validate-schemas
+
+      - name: Confirm safe configuration
+        run: |
+          test -f .env.example
+          grep -qx 'ENABLE_NTN_FEATURES=false' .env.example
+          echo "GNAI TV quality gate passed."
