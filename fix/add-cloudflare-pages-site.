@@ -1,0 +1,10 @@
+index.html
+assets/css/site.css
+assets/js/app.js
+functions/api/health.js
+functions/api/live.js
+functions/api/youtube-uploads.js
+_headers
+wrangler.toml
+robots.txt
+sitemap.xml
