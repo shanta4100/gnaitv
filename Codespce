@@ -1,0 +1,17 @@
+cd /workspaces/gnaitv
+
+npm test
+npm run validate-schemas
+
+DEPLOY_DIR="$(mktemp -d)"
+trap 'rm -rf "$DEPLOY_DIR"' EXIT
+
+git archive HEAD | tar -x -C "$DEPLOY_DIR"
+
+test -f "$DEPLOY_DIR/index.html"
+test -f "$DEPLOY_DIR/functions/api/health.js"
+test -f "$DEPLOY_DIR/functions/api/live.js"
+
+npx wrangler pages deploy "$DEPLOY_DIR" \
+  --project-name=gnaitv \
+  --branch=main
