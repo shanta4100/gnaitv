@@ -1,0 +1,8 @@
+curl --fail --show-error --location -I \
+  https://gnaitv.pages.dev/
+
+curl --fail --show-error --location \
+  https://gnaitv.pages.dev/api/health
+
+curl --fail --show-error --location \
+  https://gnaitv.pages.dev/api/live
