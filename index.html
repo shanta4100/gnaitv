@@ -4,27 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>GNAI TV</title>
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <style>
+    body {
+      margin: 0;
+      background: #071225;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    main {
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+      padding: 24px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid #f6b73c;
+      border-radius: 999px;
+      color: #f6b73c;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <a class="brand" href="/">GNAI TV</a>
-    <nav>
-      <a href="/watch.html">Watch</a>
-      <a href="/channels.html">Channels</a>
-    </nav>
-  </header>
-
   <main>
-    <section class="hero">
-      <p>GNAIAAAC LLC</p>
-      <h1>GNAI TV</h1>
-      <p>Knowledge television ready for secure publishing.</p>
-      <p><strong>Live status: OFFLINE</strong></p>
-      <a href="/watch.html">Open Watch</a>
-    </section>
+    <h1>GNAI TV</h1>
+    <p>Knowledge television and digital media platform.</p>
+    <p class="status">Live status: OFFLINE</p>
   </main>
-
-  <footer>© GNAI TV</footer>
 </body>
 </html>
