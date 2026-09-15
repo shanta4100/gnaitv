@@ -14,3 +14,5 @@
     "pages:deploy": "npx wrangler pages deploy . --project-name=gnaitv --branch=main"
   }
 }
+Branch: fix/restore-package-json
+Commit: d3b06a3
