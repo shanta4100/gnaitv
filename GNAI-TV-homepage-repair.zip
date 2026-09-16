@@ -1,0 +1,30 @@
+GNAI TV HOMEPAGE REPAIR
+
+Target repository: shanta4100/gnaitv
+
+Upload these files to the exact repository paths:
+  index.html
+  assets/js/app.js
+  assets/css/site.css
+  test/homepage-assets.test.js
+
+After confirming assets/js/app.js exists, delete this obsolete file:
+  assests/js/app.js
+
+Do not change or delete:
+  functions/
+  _headers
+  wrangler.toml
+  .github/workflows/cloudflare-pages-deploy.yml
+  .github/workflows/gnaitv-quality-gate.yml
+
+Recommended workflow:
+  1. Create branch fix/homepage-assets from main.
+  2. Apply the four files above.
+  3. Delete assests/js/app.js.
+  4. Run npm test and npm run validate-schemas.
+  5. Open a pull request into main.
+  6. Merge only after both checks pass.
+
+This package does not include or modify Cloudflare secrets, DNS settings,
+Pages Functions, or production deployment configuration.
