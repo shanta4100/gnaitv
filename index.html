@@ -3,42 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta
+    name="description"
+    content="GNAI TV knowledge television and digital media platform."
+  >
   <title>GNAI TV</title>
-  <style>
-    body {
-      margin: 0;
-      background: #071225;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
 
-    main {
-      min-height: 100vh;
-      display: grid;
-      place-content: center;
-      padding: 24px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 12px;
-    }
-
-    .status {
-      display: inline-block;
-      padding: 10px 18px;
-      border: 1px solid #f6b73c;
-      border-radius: 999px;
-      color: #f6b73c;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/app.js" defer></script>
 </head>
+
 <body>
-  <main>
-    <h1>GNAI TV</h1>
-    <p>Knowledge television and digital media platform.</p>
-    <p class="status">Live status: OFFLINE</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <a class="brand" href="/">GNAI TV</a>
+
+    <nav aria-label="Primary navigation">
+      <a href="#watch">Watch</a>
+      <a href="#programs">Programs</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="about">
+      <div>
+        <p class="eyebrow">GNAIAAAC LLC</p>
+
+        <h1>Knowledge television and digital media.</h1>
+
+        <p class="lead">
+          Watch verified GNAI TV live broadcasts and recent public programs.
+        </p>
+
+        <a class="button" href="#watch">Open Watch</a>
+      </div>
+
+      <div class="status-card" aria-live="polite">
+        <span id="status-label">Checking broadcast status…</span>
+
+        <p id="status-detail">
+          Connecting to the verified GNAI TV status service.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="section"
+      id="watch"
+      aria-labelledby="watch-heading"
+    >
+      <h2 id="watch-heading">Watch</h2>
+
+      <div
+        id="live-player"
+        class="player"
+        hidden
+      ></div>
+
+      <p id="player-fallback">
+        No verified live broadcast is active. Recent programs remain
+        available below.
+      </p>
+    </section>
+
+    <section
+      class="section"
+      id="programs"
+      aria-labelledby="programs-heading"
+    >
+      <h2 id="programs-heading">Recent programs</h2>
+
+      <div
+        id="program-grid"
+        class="grid"
+        aria-live="polite"
+      >
+        <article class="card">
+          <p>Loading programs…</p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <span>© <span id="year"></span> GNAI TV</span>
+    <a href="#main-content">Back to top</a>
+  </footer>
 </body>
 </html>
