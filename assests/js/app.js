@@ -192,3 +192,4 @@ async function loadPrograms() {
 
 loadBroadcastStatus();
 loadPrograms();
+Restore functional GNAI TV homepage
