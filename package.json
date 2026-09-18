@@ -1,0 +1,13 @@
+{
+  "name": "gnaitv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Pages website for gnaitv.net",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/validate-site.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

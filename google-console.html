@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Console Setup | GNAI TV</title>
+  <meta name="description" content="Safe Google Cloud Console setup checklist for GNAI TV.">
+  <link rel="canonical" href="https://gnaitv.net/google-console.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/config.js" defer></script>
+  <script src="/assets/js/youtube-plugin.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><strong>GNAI TV</strong><nav class="nav-links" aria-label="Primary"><a href="/">Home</a><a href="/watch.html">Watch</a><a href="/channels.html">Channels</a><a href="/youtube-media.html">YouTube Media</a><a href="/google-console.html">Google Console</a></nav></div></header>
+  <main class="section">
+    <div class="container stack">
+      <h1>Google Console setup checklist</h1>
+      <ol class="card">
+        <li>Create or select the GNAI TV project in Google Cloud Console.</li>
+        <li>Enable only YouTube Data API v3.</li>
+        <li>Create an API key restricted to that API.</li>
+        <li>Copy the public YouTube channel ID that starts with <code>UC</code>.</li>
+        <li>Store both values in Cloudflare Production variables.</li>
+        <li>Do not commit or paste either value into the repository, issues, or pull requests.</li>
+      </ol>
+      <div class="card alt">
+        <h2>Deployment reminder</h2>
+        <p class="muted">After updating Cloudflare variables, redeploy the Pages project and verify <code>/api/health</code> plus <code>/api/youtube-uploads</code>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><p>© <span data-current-year></span> GNAI TV.</p></div></footer>
+</body>
+</html>

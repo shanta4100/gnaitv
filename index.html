@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GNAI TV</title>
+  <meta name="description" content="Cloudflare Pages website for GNAI TV recorded programming, channel information, and public documentation.">
+  <link rel="canonical" href="https://gnaitv.net/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/config.js" defer></script>
+  <script src="/assets/js/youtube-plugin.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <strong>GNAI TV</strong>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/watch.html">Watch</a>
+        <a href="/channels.html">Channels</a>
+        <a href="/youtube-media.html">YouTube Media</a>
+        <a href="/google-console.html">Google Console</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container stack">
+        <p class="kicker">Cloudflare Pages production package</p>
+        <h1>Recorded YouTube programming and public media documentation.</h1>
+        <p>The repository now serves the static pages, root headers, and Pages Functions that Cloudflare expects for <code>gnaitv.net</code>.</p>
+        <p class="status">● <span data-broadcast-status>Offline by design</span></p>
+        <div class="button-row">
+          <a class="button" href="/watch.html">Open watch page</a>
+          <a class="button secondary" href="/api/health">Check API health</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <h2>Cloudflare-ready root layout</h2>
+          <p class="muted">Static pages, <code>_headers</code>, and the <code>functions/</code> directory remain at the repository root so Pages can deploy the whole site.</p>
+        </article>
+        <article class="card">
+          <h2>Safe broadcast defaults</h2>
+          <p class="muted">The site explicitly stays offline until an approved public live video is configured and verified outside the repository.</p>
+        </article>
+        <article class="card">
+          <h2>GitHub automation restored</h2>
+          <p class="muted">Validation now checks the expected site files, and issue staleness messaging is configured for this project instead of placeholder text.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span data-current-year></span> GNAI TV.</p>
+    </div>
+  </footer>
+</body>
+</html>

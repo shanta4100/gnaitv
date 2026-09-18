@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Media | GNAI TV</title>
+  <meta name="description" content="Recent YouTube uploads surfaced through Cloudflare Pages Functions.">
+  <link rel="canonical" href="https://gnaitv.net/youtube-media.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/config.js" defer></script>
+  <script src="/assets/js/youtube-plugin.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><strong>GNAI TV</strong><nav class="nav-links" aria-label="Primary"><a href="/">Home</a><a href="/watch.html">Watch</a><a href="/channels.html">Channels</a><a href="/youtube-media.html">YouTube Media</a><a href="/google-console.html">Google Console</a></nav></div></header>
+  <main class="section">
+    <div class="container stack">
+      <div>
+        <p class="kicker">Cloudflare Pages Function</p>
+        <h1>Recent YouTube uploads</h1>
+        <p class="muted">This page calls <code>/api/youtube-uploads</code> and never exposes the YouTube API key in the page source.</p>
+      </div>
+      <section class="grid" data-uploads-root>
+        <article class="card alt"><h2>Loading uploads…</h2></article>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><p>© <span data-current-year></span> GNAI TV.</p></div></footer>
+</body>
+</html>
